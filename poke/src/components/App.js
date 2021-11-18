@@ -2,14 +2,26 @@ import React from "react"
 import './App.scss'
 import Header from "./header";
 import Footer from './footer'
+import GlobalContext from "./GlobalContext";
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Home from "./Home";
+import HomeDetails from "./Details/HomeDetails";
 
 function App() {
-  const b = 1
   return (
     <div className="App">
-      <Header b={b} />
-      <h1>meu projeto</h1>
-      <Footer />
+      <BrowserRouter>
+        <GlobalContext >
+
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/Details" element={<HomeDetails />} />
+          </Routes>
+          <Footer />
+
+        </GlobalContext>
+      </BrowserRouter>
     </div>
   );
 }

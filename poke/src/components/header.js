@@ -1,10 +1,10 @@
 import React from 'react'
 import Style from './header.module.scss'
-function header({ b }) {
+function header() {
 
     return (
         <header className={Style.header}>
-            <h1>{b}</h1>
+            <h1>ss</h1>
         </header>
     )
 }

@@ -1,15 +1,19 @@
-import { React, useContext, useEffect } from 'react'
+import { React, useContext, useState, useEffect } from 'react'
 import Style from './SlideConteiner.module.scss'
 import { Global } from '../GlobalContext'
+import SlidePhoto from './SlidePhoto';
 
 function SlideContainer() {
-    const { nome } = useContext(Global);
-    useEffect(() => {
-        console.log(nome)
-    }, [nome])
+    const context = useContext(Global);
+    const [data, setData] = useState(() => context.pokemons)
+
     return (
         <section className={Style.SlideContainer}>
-
+            {
+                !!data && data.map(pokemon => (
+                    <SlidePhoto src={pokemon.sprites.other["official-artwork"].front_default} />
+                ))
+            }
         </section>
     )
 }

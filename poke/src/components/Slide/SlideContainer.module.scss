@@ -1,4 +1,4 @@
-$backGorundColor: rgba(100, 100, 100, 0);
+$backGorundColor: rgb(151, 151, 151);
 
 .SlideContainer{
     background-color: $backGorundColor;
@@ -8,5 +8,6 @@ $backGorundColor: rgba(100, 100, 100, 0);
     display: flex;
     flex-direction: row;
     overflow: hidden;
+    
 }
 

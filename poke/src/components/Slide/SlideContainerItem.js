@@ -7,7 +7,7 @@ function SlideContainerItem({ src, details }) {
     return (
         <div className={Style.SlideContainerItem}>
             <SlidePhoto src={src} />
-            <SlideDetails details={details}/>
+            <SlideDetails details={details} />
         </div>
     )
 }

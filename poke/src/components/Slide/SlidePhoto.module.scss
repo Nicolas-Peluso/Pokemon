@@ -1,0 +1,23 @@
+@mixin Media {
+    @media (max-width: 900px) {
+        width: 250px;
+        margin: 10px;
+    }
+}
+
+.SlidePhoto{
+    margin: 50px;
+    img{
+        width: 350px;
+        transform: scale(.8);
+        opacity: .8;
+        @include Media();
+
+    }
+}
+
+
+.SlidePhoto.ativo img{
+    transform: initial;
+    opacity: initial;
+}

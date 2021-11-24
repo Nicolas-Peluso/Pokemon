@@ -1,11 +1,12 @@
-$backGorundColor: rgb(228, 0, 0);
+$backGorundColor: rgba(100, 100, 100, 0);
 
 .SlideContainer{
     background-color: $backGorundColor;
     width: 100%;
-    height: 500px;
+    height: 700px;
     margin: 80px auto;
     display: flex;
     flex-direction: row;
+    overflow: hidden;
 }
 

@@ -1,0 +1,26 @@
+@mixin FontDefaultDetails{
+    font-family: sans-serif, 'Times New Roman', Times, serif;
+    font-size: 1.5em;
+    font-weight: lighter;
+    text-align: end;
+}
+
+.SlideDetails{
+    border: 1px solid black;
+    height: 150px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    
+}
+.Nome, .Especie{
+    @include FontDefaultDetails();       
+}
+.Nome{
+    grid-column: 1;
+    grid-row: 1;
+}
+.Especie{
+    grid-column: 2;
+    grid-row: 1;
+}

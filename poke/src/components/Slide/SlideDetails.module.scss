@@ -5,6 +5,8 @@
     font-size: 1.5em;
     font-weight: lighter;
     color: white;
+    margin: 2px;
+    padding: 2px;
 }
 
 .SlideDetails{
@@ -19,12 +21,12 @@
     @include FontDefaultDetails();       
 }
 .Nome{
-    grid-column: 1;
+    grid-column: 1 / -1;
     grid-row: 1;
 }
 .Especie{
-    grid-column: 2;
-    grid-row: 1;
+    grid-column: 1;
+    grid-row: 2;
 }
 
 button{
@@ -38,10 +40,16 @@ button{
     border: 1px solid rgb(0, 0, 0);
     border-radius: 4px;
     cursor: pointer;
+    align-self: end;
+    justify-self: flex-end;
 }
 
 button:active, button:hover{
     transform: scale(1.1);
     box-shadow: 2px 2px 10px black;
     transition: .4s;
+}
+
+.SlideIcon{
+    width: 70px;
 }

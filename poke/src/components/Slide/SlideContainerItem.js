@@ -5,10 +5,10 @@ import SlidePhoto from './SlidePhoto'
 
 function SlideContainerItem({ src, details }) {
     return (
-        <div className={Style.SlideContainerItem}>
+        <section className={`${Style.SlideContainerItem}`}>
             <SlidePhoto src={src} />
             <SlideDetails details={details} />
-        </div>
+        </section>
     )
 }
 
